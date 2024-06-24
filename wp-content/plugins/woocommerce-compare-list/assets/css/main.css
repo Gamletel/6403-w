@@ -1,0 +1,135 @@
+/*============ COMPARE-PAGE ============*/
+.page-compare-list {
+  margin-bottom: 60px;
+}
+.page-compare-list .title-page {
+  margin-bottom: 30px;
+}
+.page-compare-list .page-compare-list-body {
+  overflow: auto;
+  padding: 25px;
+  margin: -25px;
+}
+.page-compare-list .page-compare-list-body::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #C4C4C4;
+}
+.page-compare-list .page-compare-list-body::-webkit-scrollbar-thumb {
+  background-color: #C4C4C4;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px var(--primary);
+}
+.page-compare-list .page-compare-list-body .page-compare-table {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody td {
+  min-width: 285px;
+  max-width: 285px;
+  width: 100%;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .products-row .product-item {
+  border-bottom: 40px solid #ffffff;
+  border-left: 30px solid #ffffff;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .attributes-row .attribute-name {
+  text-align: center;
+  color: #273141;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .attributes-row .attribute-value {
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 400;
+  padding: 15px;
+  border-left: 30px solid #ffffff;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .attributes-row .attribute-value ins {
+  text-decoration: none;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .attributes-row .attribute-value .product-price .price {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .attributes-row .attribute-value .product-price .additional-price {
+  font-size: 12px;
+  text-decoration: line-through;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .attributes-row:nth-last-child(even) .attribute-name {
+  background: #F7F7F7;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .attributes-row:nth-last-child(even) .attribute-value {
+  background: #F7F7F7;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .products-buttons-delete-row .product-button-delete {
+  border-left: 30px solid #ffffff;
+  border-top: 20px solid #ffffff;
+  border-bottom: 20px solid #ffffff;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .products-buttons-delete-row .product-button-delete .compare-delete-item {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  background: none;
+  color: var(--primary);
+  border: none;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .products-buttons-delete-row .product-button-delete .compare-delete-item .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .products-buttons-delete-row .product-button-delete .compare-delete-item:hover {
+  color: var(--hover);
+}
+.page-compare-list .page-compare-list-body .page-compare-table tbody .products-buttons-delete-row .product-button-delete .compare-delete-item:hover .icon svg path {
+  stroke: var(--hover);
+}
+
+@media (max-width: 991px) {
+  .page-compare-list {
+    margin-bottom: 40px;
+  }
+  .page-compare-list .page-compare-list-body {
+    padding: 10px;
+    margin: -10px;
+  }
+  .page-compare-list .page-compare-list-body .page-compare-table tbody td {
+    min-width: 240px;
+    max-width: 240px;
+  }
+  .page-compare-list .page-compare-list-body .page-compare-table tbody .attributes-row .attribute-value {
+    border-left: 15px solid #ffffff;
+  }
+  .page-compare-list .page-compare-list-body .page-compare-table tbody .products-row .product-item {
+    border-bottom: 20px solid #ffffff;
+    border-left: 15px solid #ffffff;
+  }
+}
+#compare-modal {
+  position: fixed;
+  right: 0;
+  top: 70px;
+  background-color: #FEC400;
+  padding: 20px;
+  border: 1px solid #FEC400;
+  color: #ffffff;
+  transition: all 0.3s ease-in;
+  transform: translateX(400px);
+}
+#compare-modal.active {
+  transform: translateX(0);
+  z-index: 10000;
+}
+
+/*# sourceMappingURL=main.css.map */

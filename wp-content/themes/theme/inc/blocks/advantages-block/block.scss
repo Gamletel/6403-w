@@ -1,0 +1,103 @@
+@import '../../../assets/css/_colors.scss';
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+	$k: ($f-max - $f-min)/($v-max - $v-min);
+	$b: $f-min - $k * $v-min;
+
+	$b: $b * 1px;
+
+	@return calc(#{$k} * 100vw + #{$b});
+}
+
+#advantages-block{
+	.advantages{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		.advantage{
+			padding: 40px 50px;
+			border-radius: 5px;
+			background: var(--bg-light, #F5F5F5);
+
+			transition: background-color .15s ease-in;
+
+			&__title{
+				display: inline;
+				opacity: 0;
+
+				color: var(--main-text);
+				font-weight: 900;
+
+				transition: opacity .15s ease-in, color .15s ease-in;
+			}
+
+			&__text{
+				display: inline;
+				color: var(--main-text);
+
+				transition: color .15s ease-in;
+			}
+
+			&:hover{
+				background-color: var(--primary);
+
+				.advantage{
+					&__title{
+						opacity: 1;
+						color: var(--card);
+					}
+					&__text{
+						color: var(--card);
+					}
+				}
+			}
+		}
+	}
+}
+
+/*============ MEDIA ==================*/
+@media (max-width: 1240px) {
+
+}
+
+@media (max-width: 1221px) {
+
+}
+
+@media (max-width: 1025px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 769px) {
+	#advantages-block {
+		.advantages {
+			.advantage{
+				padding: 20px 25px;
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	#advantages-block {
+		.advantages {
+			gap: 10px;
+			.advantage{
+				padding: 10px 15px;
+			}
+		}
+	}
+}
+
+@media (max-width: 498px) {
+
+}
+
+@media (max-width: 375px) {
+
+}

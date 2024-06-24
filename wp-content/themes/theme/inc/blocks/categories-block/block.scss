@@ -1,0 +1,90 @@
+@import '../../../assets/css/_colors.scss';
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc(#{$k} * 100vw + #{$b});
+}
+
+#categories-block {
+  background-color: var(--bg-light);
+
+  .archive-link-holder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 30px;
+    border-radius: 5px;
+    background: var(--primary, #00BAD4);
+    z-index: 1;
+
+    &__bg {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__title {
+      color: var(--card);
+      font-size: calcFluidFontSize(18, 32, 320, 1920);
+    }
+
+    &__btn{
+
+      white-space: unset;
+    }
+  }
+}
+
+/*============ MEDIA ==================*/
+@media (max-width: 1240px) {
+
+}
+
+@media (max-width: 1221px) {
+
+}
+
+@media (max-width: 1025px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 769px) {
+  #categories-block {
+    .archive-link-holder {
+      padding: 15px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #categories-block .archive-link-holder__btn{
+    width: 100%;
+  }
+}
+
+@media (max-width: 498px) {
+
+}
+
+@media (max-width: 375px) {
+
+}

@@ -1,0 +1,87 @@
+@font-face {
+    font-display: swap;
+    font-family: "OpenSans";
+    font-style: normal;
+    font-weight: 300;
+    src: url("OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "OpenSans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "OpenSans";
+    font-style: normal;
+    font-weight: 500;
+    src: url("OpenSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "OpenSans";
+    font-style: normal;
+    font-weight: 600;
+    src: url("OpenSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "OpenSans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "OpenSans";
+    font-style: normal;
+    font-weight: 900;
+    src: url("OpenSans-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url("Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    src: url("Montserrat-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    src: url("Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    src: url("Montserrat-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    src: url("Montserrat-Black.ttf") format("truetype");
+}

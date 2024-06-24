@@ -1,0 +1,50 @@
+#table-block .table-container {
+  overflow: auto;
+}
+#table-block .block__description {
+  margin-bottom: 40px;
+  color: var(--main-text);
+}
+#table-block table {
+  width: 100%;
+  border: 1px solid var(--stroke);
+  border-collapse: collapse;
+}
+#table-block table thead td {
+  padding: 20px 30px;
+  color: var(--primary, #00BAD4);
+}
+#table-block table tr td {
+  border: 1px solid var(--stroke);
+}
+#table-block table tbody tr td {
+  vertical-align: top;
+  padding: 25px 30px;
+}
+#table-block table tbody tr td:first-child {
+  padding: 30px;
+}
+#table-block table tbody tr td .text-block *:not(.p):first-child {
+  margin-top: 0;
+}
+
+/*============ MEDIA ==================*/
+@media (max-width: 1400px) {
+  #table-block table thead tr td {
+    padding: 10px 15px;
+  }
+  #table-block table tbody tr td {
+    min-width: 140px;
+    padding: 15px;
+  }
+  #table-block table tbody tr td:first-child {
+    padding: 15px;
+  }
+}
+@media (max-width: 576px) {
+  #table-block .block__description {
+    margin-bottom: 20px;
+  }
+}
+
+/*# sourceMappingURL=block.css.map */

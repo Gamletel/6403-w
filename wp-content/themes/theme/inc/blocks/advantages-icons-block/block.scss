@@ -1,0 +1,124 @@
+@import '../../../assets/css/_colors.scss';
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+	$k: ($f-max - $f-min)/($v-max - $v-min);
+	$b: $f-min - $k * $v-min;
+
+	$b: $b * 1px;
+
+	@return calc(#{$k} * 100vw + #{$b});
+}
+
+#advantages-icons-block{
+	.advantages{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 30px;
+
+		.advantage{
+			display: flex;
+			flex-direction: column;
+			padding: 40px;
+			border-radius: 5px;
+			background: var(--bg-light, #F5F5F5);
+
+			&__icon{
+				width: 100px;
+				height: 100px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: var(--primary);
+				border-radius: 50%;
+				flex-shrink: 0;
+				margin-bottom: 20px;
+
+				img,svg{
+					width: 40px;
+					height: 40px;
+					object-fit: contain;
+				}
+			}
+
+			&__title{
+				margin-bottom: 10px;
+
+				color: var(--head);
+			}
+
+			&__text{
+				color: var(--main-text);
+			}
+		}
+	}
+}
+
+/*============ MEDIA ==================*/
+
+@media (max-width: 1350px) {
+	#advantages-icons-block{
+		.advantages{
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+@media (max-width: 1240px) {
+
+}
+
+@media (max-width: 1221px) {
+
+}
+
+@media (max-width: 1025px) {
+
+}
+
+@media (max-width: 992px) {
+	#advantages-icons-block{
+		.advantages{
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@media (max-width: 769px) {
+	#advantages-icons-block {
+		.advantages {
+			.advantage{
+				padding: 20px;
+
+				&__icon{
+					width: 75px;
+					height: 75px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	#advantages-icons-block .advantages{
+		grid-template-columns: 1fr;
+		grid-gap: 15px;
+		.advantage{
+			&__icon{
+				width: 50px;
+				height: 50px;
+
+				img,svg{
+					width: 30px;
+					height: 30px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 498px) {
+
+}
+
+@media (max-width: 375px) {
+
+}

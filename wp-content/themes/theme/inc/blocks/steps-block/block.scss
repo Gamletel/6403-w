@@ -1,0 +1,117 @@
+@import '../../../assets/css/_colors.scss';
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+	$k: ($f-max - $f-min)/($v-max - $v-min);
+	$b: $f-min - $k * $v-min;
+
+	$b: $b * 1px;
+
+	@return calc(#{$k} * 100vw + #{$b});
+}
+
+#steps-block{
+	background-color: var(--bg-light);
+
+	.steps{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 30px;
+
+		.step{
+			display: flex;
+			flex-direction: column;
+			padding: 20px 30px;
+			border-radius: 5px;
+			background: var(--card, #FFF);
+
+			&__index{
+				margin-bottom: 10px;
+
+				color: var(--primary, #00BAD4);
+				font-size: calcFluidFontSize(40,54,320,1920);
+				font-style: normal;
+				font-weight: 600;
+				line-height: 100%; /* 54px */
+			}
+
+			&__title{
+				margin-bottom: 10px;
+
+				color: var(--head);
+			}
+
+			&__text{
+				color: var(--main-text)
+			}
+		}
+
+		.last-step{
+			display: flex;
+			flex-direction: column;
+			padding: 20px 30px;
+			background: var(--primary, #00BAD4);
+
+			&__title{
+				margin-bottom: 20px;
+
+				color: var(--card);
+			}
+
+			&__text{
+				margin-bottom: 30px;
+
+				color: var(--bg-light);
+			}
+
+			&__btn{
+				width: 100%;
+			}
+		}
+	}
+}
+
+/*============ MEDIA ==================*/
+@media (max-width: 1240px) {
+
+}
+
+@media (max-width: 1221px) {
+
+}
+
+@media (max-width: 1025px) {
+
+}
+
+@media (max-width: 992px) {
+	#steps-block {
+		.steps{
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@media (max-width: 769px) {
+
+}
+
+@media (max-width: 576px) {
+	#steps-block .steps{
+		grid-template-columns: 1fr;
+		grid-gap: 15px;
+		.step{
+			padding: 10px 15px;
+		}
+		.last-step{
+			padding: 10px 15px;
+		}
+	}
+}
+
+@media (max-width: 498px) {
+
+}
+
+@media (max-width: 375px) {
+
+}

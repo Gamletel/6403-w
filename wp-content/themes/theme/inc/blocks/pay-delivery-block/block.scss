@@ -1,0 +1,136 @@
+@import '../../../assets/css/_colors.scss';
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc(#{$k} * 100vw + #{$b});
+}
+
+#pay-delivery-block {
+  .pay {
+    margin-bottom: 30px;
+  }
+
+  .block {
+    border-radius: 5px;
+    border: 1px solid var(--bg-light, #F5F5F5);
+    background: var(--card, #FFF);
+
+    display: flex;
+
+    &__content {
+      padding: 40px 40px 40px 50px;
+
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__text {
+      color: var(--main-text);
+    }
+
+    &__images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-content: center;
+      grid-gap: 30px;
+      padding: 30px 50px;
+      border-radius: 5px;
+      border: 1px solid var(--bg-light, #F5F5F5);
+      background: var(--bg-light, #F5F5F5);
+
+      img, svg {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+/*============ MEDIA ==================*/
+@media (max-width: 1240px) {
+
+}
+
+@media (max-width: 1221px) {
+
+}
+
+@media (max-width: 1025px) {
+
+}
+
+@media (max-width: 992px) {
+  #pay-delivery-block .block{
+    &__content{
+      padding: 20px 20px 20px 25px;
+    }
+
+    &__images{
+      padding: 15px 25px;
+      grid-gap: 15px;
+
+      img,svg{
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  #pay-delivery-block .block{
+    flex-direction: column;
+
+    &__content{
+      padding: 20px 25px;
+    }
+
+    &__images{
+      grid-template-columns: repeat(6, 1fr);
+      justify-items: center;
+
+      img,svg{
+        aspect-ratio: 1/1;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #pay-delivery-block .block__content h3{
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 498px) {
+  #pay-delivery-block .block{
+    &__content{
+      padding: 10px 15px;
+    }
+
+    &__images{
+      padding: 10px 15px;
+      grid-gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  #pay-delivery-block .block{
+    &__images{
+      grid-template-columns: repeat(3, 1fr);
+
+      img,svg{
+        max-width: 75px;
+      }
+    }
+  }
+}
